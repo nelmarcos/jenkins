@@ -9,7 +9,7 @@ pipeline {
 
     stage('Buzz Archive') {
       steps {
-        archiveArtifacts(artifacts: './jenkins/*.gz', fingerprint: true)
+        archiveArtifacts(artifacts: './jenkins/test.txt.gz', fingerprint: true)
       }
     }
 
