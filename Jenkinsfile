@@ -8,9 +8,9 @@ pipeline {
       }
     }
 
-    stage('Buzz Test') {
+    stage('Buzz Archive') {
       steps {
-        sh './jenkins/test-all.sh'
+        archiveArtifacts(artifacts: './jenkins/*.gz', fingerprint: true)
       }
     }
 
