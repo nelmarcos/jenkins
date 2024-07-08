@@ -4,13 +4,13 @@ pipeline {
     stage('Buzz Build') {
       steps {
         sh './jenkins/build.sh'
+        archiveArtifacts(artifacts: './jenkins/*.gz', fingerprint: true)
       }
     }
 
     stage('Buzz Archive') {
       steps {
         sh 'pwd'
-        archiveArtifacts(artifacts: './jenkins/test.txt.gz', fingerprint: true)
       }
     }
 
