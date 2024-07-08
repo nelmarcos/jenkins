@@ -9,6 +9,7 @@ pipeline {
 
     stage('Buzz Archive') {
       steps {
+        sh 'pwd'
         archiveArtifacts(artifacts: './jenkins/test.txt.gz', fingerprint: true)
       }
     }
