@@ -11,6 +11,7 @@ pipeline {
     stage('Buzz Archive') {
       steps {
         sh 'pwd'
+        junit '/var/jenkins_home/workspace/jenkins_simple-pipeline/jenkins/jacocoTestReport.xml'
       }
     }
 
